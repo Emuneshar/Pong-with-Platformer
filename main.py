@@ -49,3 +49,34 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0,260)
 pen.write("Player A: 0 Player B: 0", align = "center", font = ("Courier", 24, "normal"))
+
+def paddle_One_up():
+  y = paddleOne.ycor()
+  y += 20
+  paddleOne.sety(y)
+
+def paddle_One_down():
+  y = paddleOne.ycor()
+  y -= 20
+  paddleOne.sety(y)
+
+def paddle_Two_up():
+  y = paddleTwo.ycor()
+  # y = y + 20
+  y += 20 
+  paddleTwo.sety(y)
+  
+def paddle_Two_down():
+  y = paddleTwo.ycor()
+  # y = y - 20
+  y -= 20 
+  paddleTwo.sety(y)
+
+# Button Bindings
+window.listen()
+window.onkeypress(paddle_One_up, "w")
+window.onkeypress(paddle_One_down, "s")
+window.onkeypress(paddle_Two_up, "Up")
+window.onkeypress(paddle_Two_down, "Down")
+
+  
