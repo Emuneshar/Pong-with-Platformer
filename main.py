@@ -37,8 +37,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0,0)
-ball.dx = 2
-ball.dy = 2
+ball.dx = 0.05
+ball.dy = -0.05
 
 # Pen
 pen = turtle.Turtle()
@@ -79,4 +79,14 @@ window.onkeypress(paddle_One_down, "s")
 window.onkeypress(paddle_Two_up, "Up")
 window.onkeypress(paddle_Two_down, "Down")
 
-  
+while True:
+  window.update()
+
+  ball.setx(ball.xcor()+ ball.dx)
+  ball.sety(ball.ycor()+ ball.dy)
+
+  # border checking
+  if ball.ycor() > 290:
+    ball.sety(290)
+    ball.dy *= -1
+
