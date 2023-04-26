@@ -93,3 +93,10 @@ while True:
   elif ball.ycor() < -290:
     ball.sety(-290)
     ball.dy *= -1
+
+  if ball.xcor() > 390:
+    scoreA += 1
+    pen.clear()
+    pen.write("Player A: {} Player B{}".format(scoreA, scoreB), align="center", font=("Courier", 24, "normal"))
+    ball.goto(0,0)
+    ball.dx *= -1
