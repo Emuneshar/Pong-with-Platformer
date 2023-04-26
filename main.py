@@ -107,3 +107,6 @@ while True:
     pen.write("Player A: {} Player B{}".format(scoreA, scoreB), align="center", font=("Courier", 24, "normal"))
     ball.goto(0,0)
     ball.dx *= -1
+
+
+  if (ball.xcor() > 340 and ball.xcor() < 350) and ball.ycor() < paddleTwo.ycor() + 40 and ball.ycor() > paddleTwo.ycor() -50:
