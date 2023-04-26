@@ -115,3 +115,4 @@ while True:
 
   elif (ball.xcor() < -340 and ball.xcor() > -350) and ball.ycor() < paddleOne.ycor() + 40 and ball.ycor() > paddleOne.ycor() -50:
     ball.setx(-340)
+    ball.dx *= -1
