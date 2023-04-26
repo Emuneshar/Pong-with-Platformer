@@ -110,3 +110,4 @@ while True:
 
 
   if (ball.xcor() > 340 and ball.xcor() < 350) and ball.ycor() < paddleTwo.ycor() + 40 and ball.ycor() > paddleTwo.ycor() -50:
+     ball.setx(340)
